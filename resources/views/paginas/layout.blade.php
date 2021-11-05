@@ -16,24 +16,18 @@
                 <img src="{{asset('img/logo.png')}}" alt="Logo" />
             </picture>
         </section>
-    </header>
-    <nav>
-        <ul>
-            <li>
-                <a href="{{url('/inicio')}}">Início</a>
-            </li>
-            <li>
-                <a href="{{url('/acesso')}}">Acesso</a>
-            </li>
-            <li>
-                <a href="{{url('/perfil')}}">Perfil</a>
-            </li>
-            <li>
-                <a href="{{url('/sugestoes')}}">Sugestões</a>
-            </li>
+        <nav>
+            <a href="{{url('/inicio')}}">Início</a>
 
-        </ul>
-    </nav>
+            <a href="{{url('/acesso')}}">Acesso</a>
+
+            <a href="{{url('/perfil')}}">Perfil</a>
+
+            <a href="{{url('/sugestoes')}}">Sugestões</a>
+
+        </nav>
+    </header>
+
     <main>
         @yield('content')
     </main>
