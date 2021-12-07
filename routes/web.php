@@ -14,13 +14,15 @@ use App\Http\Controllers\Initial\InicioController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [InicioController::class, "index"]);
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+    /*  Esse controller é para fazer o check-list do viajante, por isso é ressource, já que precisa do get/delete/edit ...*/
+    Route::resource("clviagem", ClviagemController::class);
+    Route::get("/sugestoes", [SugestoesController::class, "index"]);
 });
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
-Route::get("/sugestoes", [SugestoesController::class, "index"]);
-Route::get("/inicio", [InicioController::class, "index"]);

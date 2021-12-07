@@ -17,11 +17,9 @@
             </picture>
         </section>
         <nav>
-            <a href="{{url('/inicio')}}">Início</a>
+            <a href="{{url('/')}}">Início</a>
 
-            <a href="{{url('/acesso')}}">Acesso</a>
-
-            <a href="{{url('/perfil')}}">Perfil</a>
+            <a href="{{url('/dashboard')}}">Perfil</a>
 
             <a href="{{url('/sugestoes')}}">Sugestões</a>
 

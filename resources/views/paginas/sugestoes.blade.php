@@ -2,14 +2,45 @@
 
 @section('content')
 <h1>Sugestões:</h1>
-<ul>
-    <li> <a href="{{url('/Hoteis')}}">Hotéis</a></li>
-    <li> <a href="{{url('/Pontos turisticos')}}">Pontos turísticos</a></li>
-    <li> <a href="{{url('/Restaurantes')}}">Restaurantes</a></li>
-    <li> <a href="{{url('/Documentos')}}">Documentos</a></li>
-    <li> <a href="{{url('/Dicas')}}">Dicas</a></li>
-    <li> <a href="{{url('/Montar check-list da viagem')}}">Montar check-list da viagem</a></li>
-    <li> <a href="{{url('/Chheck-list de paises')}}">Montar check-list de países</a></li>
-</ul>
+<div class="grid-container">
+    <div class="polaroid">
+        <img src="{{asset('img/restaurante.jpg')}}" alt="mapa" width="100%" />
+        <div class="container">
+            <a href="{{url('/Restaurantes')}}">Restaurantes</a>
+        </div>
+    </div>
 
+    <div class="polaroid">
+        <img src="{{asset('img/hotel.jpg')}}" alt="mapa" width="100%" />
+        <div class="container">
+            <a href="{{url('/Hoteis')}}">Hotéis</a>
+        </div>
+    </div>
+
+    <div class="polaroid">
+        <img src="{{asset('img/dicas.jpg')}}" alt="mapa" width="100%" />
+        <div class="container">
+            <a href="{{url('/Dicas')}}">Dicas</a>
+        </div>
+    </div>
+    <div class="polaroid">
+        <img src="{{asset('img/documentos.jpg')}}" alt="mapa" width="100%" />
+        <div class="container">
+            <a href="{{url('/D')}}">Documentos</a>
+        </div>
+    </div>
+    <div class="polaroid">
+        <img src="{{asset('img/viagem.jpg')}}" alt="mapa" width="100%" />
+        <div class="container">
+            <a href="{{url('/clviagem')}}">Montar check-list de viagens</a>
+        </div>
+    </div>
+
+    <div class="polaroid">
+        <img src="{{asset('img/checklist.jpg')}}" alt="mapa" width="100%" />
+        <div class="container">
+            <a href="{{url('/Chheck-list de paises')}}">Montar check-list de países</a>
+        </div>
+    </div>
+</div>
 @endsection
